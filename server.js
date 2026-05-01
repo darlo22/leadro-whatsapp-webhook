@@ -3,7 +3,7 @@ const app = express();
 
 app.use(express.json());
 
-const VERIFY_TOKEN = "leadro_verify_token";
+const VERIFY_TOKEN = process.env.VERIFY_TOKEN;
 
 // Webhook verification
 app.get("/webhook", (req, res) => {
